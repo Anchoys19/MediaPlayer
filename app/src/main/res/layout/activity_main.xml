@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎵 Медіаплеєр"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Вибір типу -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Тип файлу:"
+            android:textColor="#BBBBBB"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/rbAudio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🎵  Аудіо"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:checked="true"
+                android:buttonTint="#1DB954"/>
+
+            <RadioButton
+                android:id="@+id/rbVideo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🎬  Відео"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:buttonTint="#1DB954"/>
+        </RadioGroup>
+
+        <!-- Секція 1: Файл зі сховища -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Файл зі сховища пристрою"
+            android:textColor="#1DB954"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnPickFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Обрати файл"
+            android:backgroundTint="#1DB954"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvSelectedFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Файл не обрано"
+            android:textColor="#888888"
+            android:textSize="13sp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Секція 2: URL з інтернету -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Файл з Інтернету (URL)"
+            android:textColor="#1DB954"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="https://example.com/audio.mp3"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#555555"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:inputType="textUri"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnLoadUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Використати URL"
+            android:backgroundTint="#333333"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Кнопка відкрити плеєр -->
+        <Button
+            android:id="@+id/btnOpenPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="▶  ВІДКРИТИ ПЛЕЄР"
+            android:backgroundTint="#1DB954"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>
